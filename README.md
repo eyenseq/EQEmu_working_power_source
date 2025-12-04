@@ -6,6 +6,10 @@
 This system lets you create **custom power sources or charm-slot items** whose stats scale dynamically based on **total purity worn by the player**.  
 Perfect for custom servers, progression environments, or custom gearing systems.
 
+**Version 1** Always up to date more db hits.
+
+**Version 2** Only updated on zone reads from cache after initial db hit..
+
 ---
 
 ## 🔧 Features
@@ -103,6 +107,13 @@ sub EVENT_SCALE_CALC {
 
     $questitem->SetScale($scale);
 }
+```
+
+## VERSION 2 ONLY
+```
+sub EVENT_ENTERZONE {
+	 return unless $client;
+	 plugin::powersource_recalc($client);
 ```
 
 ---
