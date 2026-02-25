@@ -54,9 +54,9 @@ items.purity > 0
 Example:
 
 ```
-server/quests/items/147705.pl
+server/quests/global/items/147705.pl
 ```
-
+Whatever you name it goes in CHARMFILE ID  
 ---
 
 # 💠 Charm File Example  
